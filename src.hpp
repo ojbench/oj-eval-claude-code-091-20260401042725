@@ -23,6 +23,9 @@ public:
             : it(i), container(c) {}
 
         const Key& operator*() const {
+            if (it == container->end()) {
+                throw std::out_of_range("Dereferencing end iterator");
+            }
             return *it;
         }
 
