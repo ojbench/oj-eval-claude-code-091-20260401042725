@@ -27,9 +27,7 @@ public:
         }
 
         iterator& operator++() {
-            if (container && it != container->end()) {
-                ++it;
-            }
+            ++it;
             return *this;
         }
 
@@ -40,9 +38,7 @@ public:
         }
 
         iterator& operator--() {
-            if (container && it != container->begin()) {
-                --it;
-            }
+            --it;
             return *this;
         }
 
